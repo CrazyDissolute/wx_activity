@@ -1,0 +1,46 @@
+.page__hd {
+  padding: 20px;
+  line-height: 30px;
+}
+
+.page__title {
+  font-size: 20px;
+}
+
+.weui-cell_input{
+  padding:10px 10px;
+  background-color:#fff;
+  display:flex;
+  border-radius:5px;
+  margin:10px;
+  border:1px solid #ddd;
+}
+.weui-cell__hd{
+  width:80px;
+  border-right:1px solid #ccc;
+  margin-right:10px;
+}
+.weui-cell__bd{
+  flex: 1;
+  line-height:22px;
+}
+.weui-cells__title{
+  padding: 10px;
+}
+.weui-area{
+  background-color:#fff;
+  border:1px solid #ccc;
+  border-radius:5px;
+  padding:10px;
+  margin:0 10px;
+}
+textarea{
+  width: 100%;
+}
+.btn-area{
+  padding: 20px 10px 40px;
+}
+.weui-textarea-counter{
+  color: #888;
+  font-size: 14px;
+}

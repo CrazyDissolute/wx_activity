@@ -1,0 +1,51 @@
+/* JBL/activity/list/list.wxss */
+
+.page {
+  padding: 20px 10px;
+}
+
+.title {
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.act_info {
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  line-height: 35px;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.act_info .name {
+  font-size: 15px;
+  color: #000;
+}
+
+.act_info .img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px #ddd;
+  opacity: 0.8;
+}
+
+.act_info .info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.status image{
+  width: 30px;
+  height: 30px;
+}

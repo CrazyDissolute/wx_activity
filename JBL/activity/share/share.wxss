@@ -1,0 +1,35 @@
+/* JBL/activity/share/share.wxss */
+
+page{
+  background-color: white;
+}
+
+.share_hb{
+  margin: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  text-align: center;
+  line-height: 30px;
+}
+.share_hb text{
+  display: block;
+}
+.share_hb .share_title{
+  font-size: 20px;
+  color: red;
+}
+.share_code{
+  text-align: center;
+  padding: 10 20px 0;
+}
+.share_but{
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.share_but button{
+  margin-bottom: 10px;
+}

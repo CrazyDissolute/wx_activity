@@ -1,0 +1,60 @@
+<wxs module="rank">
+  var sort = function(data, num) {
+    var sortData = [];
+    for (var i = 0; i < data.length; i++) {
+      sortData.push(data[i].number);
+    }
+
+    function sequence(a, b) {
+      return b - a;
+    }
+
+    function unique(arr) {
+      var uniqueResult = [],
+        hash = {}, elem;
+      for (var j = 0;
+        (elem = arr[j]) != null; j++) {
+        if (!hash[elem]) {
+          uniqueResult.push(elem);
+          hash[elem] = true;
+        }
+      }
+      return uniqueResult;
+    }
+    var newSort = sortData.sort(sequence);
+    var newUnique = unique(newSort);
+
+    return newUnique.indexOf(num)+1;
+  };
+  module.exports.sort = sort;
+</wxs>
+<view class='page'>
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <block wx:for="{{typeArr}}" wx:key="*this">
+      <view class="tab-item {{currentTab==index?'active':''}}" data-current="{{index}}" bindtap="swichNav">{{item}}</view>
+    </block>
+  </scroll-view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper-item wx:for="{{typedata}}" wx:key="*this">
+      <scroll-view scroll-y="true" bindscrolltolower="glorypull" class="scoll-h">
+        <block wx:for="{{expertList[item].actData.data}}" wx:key="index" wx:for-item="itemUser">
+          <view class="item-ans">
+            <view class='nameNumber'>
+              <text>{{rank.sort(expertList[item].actData.data, itemUser.number)}}</text>
+            </view>
+            <view class="avatar">
+              <image class="img" src="{{itemUser.avatarurl}}"></image>
+            </view>
+            <view class="expertInfo">
+              <view class="name">{{itemUser.nickname}}</view>
+              <!-- <view class="tag">{{itemUser.number}}</view> -->
+              <!-- <view class="answerHistory">134个回答，2234人听过 </view>  -->
+            </view>
+            <view class='number'>参加次数：{{itemUser.number}}</view>
+            <!-- <navigator url="/pages/askExpert/expertDetail" class="askBtn">问TA</navigator> -->
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

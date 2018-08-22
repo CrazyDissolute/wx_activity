@@ -1,0 +1,33 @@
+/* JBL/activity/join/join.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.page {
+  padding: 20px 10px;
+  line-height: 30px;
+  font-size: 13px;
+}
+
+.page .title {
+  text-align: center;
+  font-size: 16px;
+}
+
+.edit {
+  text-align: right;
+}
+
+.page .but {
+  padding: 10px 0;
+}
+
+.old_image {
+  text-align: center;
+}
+
+.old_image image {
+  max-width: 100%;
+  height: auto;
+}

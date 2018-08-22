@@ -1,0 +1,171 @@
+/* JBL/activity/show/show.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.page {
+  padding: 15px 10px;
+}
+
+.title {
+  font-size: 16px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.join_num {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.act_btn {
+  display: flex;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.user_info {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+}
+
+.user_url {
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  vertical-align: middle;
+  line-height: 28px;
+}
+
+.weui-uploader__hd {
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 10px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.weui-uploader__title {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.act_pic {
+  padding: 10px 0;
+}
+
+.weui-uploader__files {
+  display: inline;
+}
+
+.weui-uploader__input-box {
+  display: inline-block;
+}
+
+.weui-uploader__file_status {
+  position: relative;
+}
+
+.weui-uploader__file_status:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.weui-uploader__file-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.weui-uploader__file {
+  width: 120rpx;
+  height: 120rpx;
+  display: inline-block;
+  border: 1px solid #d9d9d9;
+  margin: -1px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.weui-uploader__file .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.weui-uploader__file .close image {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: top;
+}
+
+.weui-uploader__img {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.weui-uploader__input-box {
+  position: relative;
+  border: 1px solid #d9d9d9;
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 5px;
+}
+
+.weui-uploader__input-box:after, .weui-uploader__input-box:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #d9d9d9;
+}
+
+.weui-uploader__input-box:before {
+  width: 2px;
+  height: 39.5px;
+}
+
+.weui-uploader__input-box:after {
+  width: 39.5px;
+  height: 2px;
+}
+
+.weui-uploader__input-box:active {
+  border-color: #999;
+}
+
+.weui-uploader__input-box:active:after, .weui-uploader__input-box:active:before {
+  background-color: #999;
+}
+
+.weui-uploader__input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}

@@ -1,0 +1,17 @@
+<!--JBL/activity/share/share.wxml-->
+<view class='page'>
+  <view class='share_hb'>
+     <text class='share_title'>{{page.title}}</text>
+     <text class='share_txt'>{{actTxt}}</text>
+     <text class='share_cont'>分享出去邀请小伙伴吧！</text> 
+  </view>
+
+  <view class='share_code'>
+    <image style="width:500rpx; height:500rpx;" src="{{page.ad_code}}"></image>
+  </view>
+
+  <view class='share_but'>
+    <button open-type='share'>邀请小伙伴</button>
+    <button bindtap='goToshow'>查看报名名单</button>
+  </view>
+</view>

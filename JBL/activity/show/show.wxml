@@ -1,0 +1,75 @@
+<view class='page'>
+  <view class='title'>{{activityInfo.title}}</view>
+  <view class='user_item'>
+
+    <view class='act_pic' wx:if="{{!(status==2 && oldFiles.length==0)}}">
+      <view class="weui-uploader">
+        <view class="weui-uploader__hd">
+          <view class="weui-uploader__title">图片上传：{{files.length+oldFiles.length}}/9</view>
+          <view class="weui-uploader__info">
+            <button size='mini' type='primary' bindtap='myUpdate' disabled='{{files.length==0}}'>上传</button>
+          </view>
+        </view>
+        <view class="weui-uploader__bd">
+          <view class="weui-uploader__files" id="uploaderFiles">
+            <block wx:for="{{files}}" wx:key="*this">
+              <view class="weui-uploader__file {{upUrl==item?'weui-uploader__file_status':''}}" id="{{item}}">
+                <view class='close' bindtap='delImg' data-index='{{index}}'>
+                  <image mode='aspecFiit' src='/JBL/images/close.png'></image>
+                </view>
+                <image class="weui-uploader__img" src="{{item}}" mode="aspectFit" data-index='{{index}}' bindtap="previewImage" />
+                <view class='weui-uploader__file-content'>{{upProgress}}%</view>
+              </view>
+            </block>
+          </view>
+          <view class="weui-uploader__files">
+            <block wx:for="{{oldFiles}}" wx:key="*this">
+              <view class="weui-uploader__file" id="{{item}}">
+                <view wx:if="{{status==0 || status==1}}" class='close' bindtap='delOldImg' data-index='{{index}}' data-url='{{item}}'>
+                  <image mode='aspecFiit' src='/JBL/images/close.png'></image>
+                </view>
+                <image class="weui-uploader__img" src="{{item}}" mode="aspectFit" data-index='{{index}}' bindtap="previewImage" />
+              </view>
+            </block>
+          </view>
+          <view class="weui-uploader__input-box" wx:if="{{status==0 || status==1}}">
+            <view class="weui-uploader__input" bindtap="chooseImage">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <block wx:if="{{unionid==activityInfo.unionid}}">
+      <view class='act_btn' wx:if="{{status==0 || status==1}}">
+        <button size='mini' wx:if="{{status==0}}" type='primary' bindtap='confirmStart'>开始活动</button>
+        <button size='mini' type='warn' bindtap='confirmEnd'>结束活动</button>
+      </view>
+      <view wx:else>
+        <view class='act_btn'>
+          <button size='mini' disabled='true'>活动已结束</button>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='act_btn' wx:if="{{status==2}}">
+        <button size='mini' disabled='true'>活动已结束</button>
+      </view>
+    </block>
+
+    <view class='join_num'>参加/报名人数：{{join_count}} / {{joinData.total||0}}</view>
+    <block wx:for="{{joinData.data}}" wx:key="{{index}}">
+      <view class='user_info'>
+        <view>
+          <image class="user_url" src="{{item.avatarurl}}" background-size="cover"></image> {{item.nickname}}</view>
+        <block wx:if="{{unionid==activityInfo.unionid}}">
+          <view>
+            <label class="checkbox">
+              <checkbox value="{{item.id}}" data-id='{{item.id}}' data-index='{{index}}' disabled='{{status==0 || status==2}}' bindtap='signActivity' checked="{{item.is_join}}" />
+            </label>
+          </view>
+        </block>
+      </view>
+    </block>
+
+  </view>
+</view>

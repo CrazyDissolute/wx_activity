@@ -1,0 +1,25 @@
+<view class='page'>
+  <view class='title'>我参加的活动</view>
+
+  <view class='act_item'>
+    <block wx:for="{{activityData.data}}" wx:key="{{index}}">
+      <view class='act_info' data-id="{{item.id}}" bindtap='goToshow'>
+        <view class='name'>
+          <image class='img' src='../../images/{{item.img}}'></image> {{item.title}}</view>
+        <view class='info'>
+          <text>时间：{{ item.act_time }}</text>
+          <text>发起人：{{item.nickname}}</text>
+        </view>
+        <view wx-if="{{item.ad_status==0||item.ad_status==1}}" class='status'>
+          <image src='/JBL/images/new.png'></image>
+        </view>
+        <view wx:else class='status'>
+          <image src='/JBL/images/end.png'></image>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{activityData.data.length==0}}">
+      <view style='text-align:center;'>我未参加活动</view>
+    </block>
+  </view>
+</view>

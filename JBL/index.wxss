@@ -1,0 +1,149 @@
+/* JBL/index.wxss */
+.logo {
+  text-align: center;
+}
+
+.logo image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.page__hd {
+  padding: 20px;
+  line-height: 30px;
+}
+
+.page__title {
+  font-size: 20px;
+}
+
+.kind-list__item {
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+.kind-list__item-hd {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+.kind-list__item-hd .weui-flex__item {
+  line-height: 25px;
+}
+
+.kind-list__item-hd .kind-list__img {
+  width: 25px;
+  height: 25px;
+}
+
+.kind-list__item-bd {
+  background-color: white;
+}
+
+.weui-cells {
+  padding: 0px 20px;
+}
+
+.weui-cell_access {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+.weui-cell_access:last-child {
+  border-bottom: 0;
+}
+
+.weui-cell__ft_in-access {
+  padding-right: 13px;
+  position: relative;
+}
+
+.weui-cell_access:first-child {
+  padding-top: 5px;
+}
+
+.weui-cell_access:last-child {
+  padding-bottom: 5px;
+}
+
+.weui-cell__ft_in-access:after {
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  top: -2px;
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  right: 2px;
+}
+
+.page__bd_spacing{
+  padding-bottom: 20px;
+}
+.weui-footer {
+  /* position: absolute;
+  bottom: 0;  */
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.weui-footer__text {
+  line-height: 40px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+}
+
+/*----------*/
+
+.kind-list__item-hd_act {
+  color: red;
+}
+
+.kind-list__item-hd_show {
+  opacity: 0.4;
+}
+
+.kind-list__item-hd {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.kind-list__item-bd {
+  height: 0;
+  overflow: hidden;
+}
+
+.kind-list__item-bd_show {
+  height: auto;
+}
+
+.weui-cells {
+  margin-top: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.weui-cells:after, .weui-cells:before {
+  display: none;
+}
+
+.weui-cells_show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}

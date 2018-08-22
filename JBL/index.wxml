@@ -1,0 +1,38 @@
+<view class="page">
+  <view class="page__hd">
+    <!-- <view class="page__title">杰钡利</view>
+        <view class="page__desc">杰钡利是一家对外贸易出口公司。</view> -->
+    <view class='logo'>
+      <image src='/JBL/images/logo.png'></image>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <view class="kind-list">
+      <block wx:for="{{list}}" wx:key="id">
+        <view class="kind-list__item">
+          <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.status ? '' : 'kind-list__item-hd_show'}} {{item.open ? 'kind-list__item-hd_act' : ''}}" bindtap="kindToggle">
+            <view class="weui-flex__item">{{item.name}}</view>
+            <image class="kind-list__img" src="images/icon_nav_{{item.id}}.png"></image>
+          </view>
+          <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
+            <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+              <block wx:for="{{item.option}}" wx:for-item="opts" wx:key="title">
+                <view wx:if="{{opts.button}}" bindtap='{{opts.event}}' class="weui-cell weui-cell_access">
+                  <view class="weui-cell__bd">{{opts.title}}</view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </view>
+                <navigator wx:else url="{{opts.path}}" class="weui-cell weui-cell_access">
+                  <view class="weui-cell__bd">{{opts.title}}</view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </navigator> 
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="weui-footer">
+    <view class="weui-footer__text">Copyright © 2018 杰钡利</view>
+  </view>
+</view>

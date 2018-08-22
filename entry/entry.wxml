@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container white">
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <text>欢迎您</text>
+    <view class='img'>
+        <image src="../JBL/images/gh_7fe3b799fb03_344.jpg" style='width:500rpx; height:500rpx;'></image>
+    </view>
+    <view style='text-align:center; padding:15px 0;'>
+      <text wx:if="{{!hasUserInfo && canIUse}}">企业内部公测</text>
+      <button wx:else size='mini' type='primary' bindtap='inHoome'>进入小程序</button>
+    </view>
+  </view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="atuh">点击登录</button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>

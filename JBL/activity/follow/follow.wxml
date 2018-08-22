@@ -1,0 +1,21 @@
+<view class='page'>
+  <view class="page__hd">
+    <view class="page__title">选择关注的活动</view>
+  </view>
+  <form>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">学习分享会</view>
+        <view class="weui-cell__ft">
+          <switch checked />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">羽毛球</view>
+        <view class="weui-cell__ft">
+          <switch checked />
+        </view>
+      </view>
+    </view>
+  </form>
+</view>

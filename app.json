@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "JBL/index",
+    "entry/entry",
+    "JBL/activity/join/join",
+    "JBL/activity/list/list",
+    "JBL/activity/new/new",
+    "JBL/activity/show/show",
+    "JBL/activity/share/share",
+    "JBL/activity/glory/glory",
+    "JBL/activity/myActivity/myActivity",
+    "JBL/activity/follow/follow",
+    "JBL/activity/edit/edit"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "杰钡利",
+    "navigationBarTextStyle": "black"
+  }
+}
