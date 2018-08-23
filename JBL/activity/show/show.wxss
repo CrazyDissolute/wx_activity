@@ -31,15 +31,16 @@ page {
 .user_info {
   display: flex;
   justify-content: space-between;
-  padding: 7px 0;
+  padding:6px 5px;
 }
 
 .user_url {
-  width: 28px;
-  height: 28px;
-  border-radius: 28px;
-  vertical-align: middle;
-  line-height: 28px;
+  width:36px;
+  height:36px;
+  border-radius:36px;
+  vertical-align:middle;
+  line-height:40px;
+  margin-right:10px;
 }
 
 .weui-uploader__hd {

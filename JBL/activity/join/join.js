@@ -121,6 +121,10 @@ Page({
   },
 
   myJoin(e) {
+    wx.showLoading({
+      title: '报名中..',
+      mask: true
+    })
     apiRequest({
       url: APIs.joinActivity,
       data: {
@@ -139,17 +143,14 @@ Page({
             url: '../share/share?id=' + this.data.id + '&from=join',
           })
         }else{
-          wx.showLoading({
+          wx.showToast({
             duration: 1500,
             title: res.data.message
           })
         }
       },
-      fail: (res) => {
-
-      },
       completeFn: (res) => {
-        //wx.hideLoading()
+        wx.hideLoading()
       }
     })
   },

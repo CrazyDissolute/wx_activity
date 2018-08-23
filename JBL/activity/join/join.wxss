@@ -9,7 +9,14 @@ page {
   line-height: 30px;
   font-size: 13px;
 }
-
+.adv_info{
+  padding-bottom: 320px;
+  position: relative;
+}
+#map{
+  position: absolute;
+  bottom: 10px;
+}
 .page .title {
   text-align: center;
   font-size: 16px;

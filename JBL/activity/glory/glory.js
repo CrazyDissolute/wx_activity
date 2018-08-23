@@ -217,6 +217,46 @@ Page({
   },
 
   glorypull() {
-    //console.log(111)
+    let type = this.data.currentTab
+    let tab = ''
+    switch (type){
+      case 0:
+        tab = 'all'
+        break
+      case 1:
+        tab = 'book'
+        break
+      case 2:
+        tab = 'badminton'
+        break
+      case 3:
+        tab = 'basketball'
+        break
+      case 4:
+        tab = 'bodyboard'
+        break
+      case 5:
+        tab = 'fishing'
+        break
+      default:
+        tab = 'sprinter'
+    }
+    let { page, actData: { lastPage }} = this.data.expertList[tab]
+    let loadPage = parseInt(page) + 1
+    console.log(loadPage, lastPage)
+    if (loadPage <= lastPage){
+      Promise.all([
+        this.getGlory({ page: loadPage, type })
+      ]).then(results => {
+        console.log(results)
+        if (results[0]) {
+          console.log(1111)
+          this.setData({
+            ['expertList.'+tab+'.page']: results[0].data.glory.page,
+            ['expertList.' + tab + '.actData.data']: (this.data.expertList[tab].actData.data).concat(results[0].data.glory.data)
+          })
+        }
+      })
+    }
   }
 })

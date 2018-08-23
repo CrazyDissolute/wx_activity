@@ -1,9 +1,8 @@
 <view class='page'>
   <view class='title'>{{activityInfo.title}}</view>
   <view class='user_item'>
-
     <view class='act_pic' wx:if="{{!(status==2 && oldFiles.length==0)}}">
-      <view class="weui-uploader">
+      <view class="weui-uploader" wx:if="{{isJoin}}">
         <view class="weui-uploader__hd">
           <view class="weui-uploader__title">图片上传：{{files.length+oldFiles.length}}/9</view>
           <view class="weui-uploader__info">

@@ -24,6 +24,7 @@ Page({
     token: '',
     join_count: 0,
     status: 0,
+    isJoin: false,
     activityInfo: {},
     files: [],
     oldFiles: [],
@@ -100,6 +101,7 @@ Page({
           this.setData({
             page,
             join_count: res.data.join_count,
+            isJoin: res.data.isJoin,
             status: res.data.activityInfo.ad_status,
             activityInfo: res.data.activityInfo,
             oldFiles: oldFiles_url,
